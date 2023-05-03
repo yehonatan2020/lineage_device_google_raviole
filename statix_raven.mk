@@ -1,23 +1,18 @@
-#
-# Copyright (C) 2021 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
 
-# Inherit some common Lineage stuff.
+# Inherit some common Statix stuff.
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/statix/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/raviole/aosp_raven.mk)
-$(call inherit-product, device/google/gs101/lineage_common.mk)
+$(call inherit-product, device/google/gs101/statix_common.mk)
 
-include device/google/raviole/raven/device-lineage.mk
+include device/google/raviole/raven/device-statix.mk
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 6 Pro
-PRODUCT_NAME := lineage_raven
+PRODUCT_NAME := statix_raven
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
